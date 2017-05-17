@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="com.traveledge.testcasesAir.Roundtrip"/>
+      <class name="com.traveledge.testcasesAir.OneWay"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.traveledge.testcasesAir.OneWay">
+        <methods>
+          <include name="bookOneWayTrip"/>
+        </methods>
+      </class> <!-- com.traveledge.testcasesAir.OneWay -->
+      <class name="com.traveledge.testcasesAir.Roundtrip">
+        <methods>
+          <include name="LogTestResult"/>
+          <include name="setUp"/>
+          <include name="bookRoundTrip"/>
+          <include name="configBrforeClass"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.traveledge.testcasesAir.Roundtrip -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
