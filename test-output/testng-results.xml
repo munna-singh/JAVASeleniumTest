@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" total="2" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5045" started-at="2017-05-11T21:12:10Z" finished-at="2017-05-11T21:12:15Z">
+  <suite name="Default suite" duration-ms="223036" started-at="2017-05-18T08:27:06Z" finished-at="2017-05-18T08:30:49Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5045" started-at="2017-05-11T21:12:10Z" finished-at="2017-05-11T21:12:15Z">
-      <class name="com.traveledge.testcasesAir.Roundtrip">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="setUp" is-config="true" duration-ms="209" started-at="2017-05-12T02:42:10Z" finished-at="2017-05-12T02:42:10Z">
+    <test name="Default test" duration-ms="223036" started-at="2017-05-18T08:27:06Z" finished-at="2017-05-18T08:30:49Z">
+      <class name="com.traveledge.testcasesAir.OneWay">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="setUp" is-config="true" duration-ms="256" started-at="2017-05-18T13:57:06Z" finished-at="2017-05-18T13:57:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="configBrforeClass()[pri:0, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="configBrforeClass" is-config="true" duration-ms="3701" started-at="2017-05-12T02:42:10Z" finished-at="2017-05-12T02:42:14Z">
+        <test-method status="PASS" signature="configBrforeClass()[pri:0, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="configBrforeClass" is-config="true" duration-ms="4088" started-at="2017-05-18T13:57:06Z" finished-at="2017-05-18T13:57:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBrforeClass -->
-        <test-method status="FAIL" signature="bookRoundTrip()[pri:1, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="bookRoundTrip" duration-ms="1299" started-at="2017-05-12T02:42:14Z" finished-at="2017-05-12T02:42:15Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="bookOneWayTrip()[pri:1, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="bookOneWayTrip" duration-ms="218330" started-at="2017-05-18T13:57:10Z" finished-at="2017-05-18T14:00:48Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=57.0.2987.133)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='label-status label-ticketed' and text()='ticketed']"}
+  (Session info: chrome=58.0.3029.110)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
+Command duration or timeout: 50.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
 System info: host: 'gireesha', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\pritam\AppData\Local\Temp\scoped_dir10876_18542}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 02e7e450c980db2cc20e915f6b8071ae
-*** Element info: {Using=id, value=username}]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\pritam\AppData\Local\Temp\scoped_dir16524_984}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 4b5a51455da33899451253448badc0ca
+*** Element info: {Using=xpath, value=//span[@class='label-status label-ticketed' and text()='ticketed']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=57.0.2987.133)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='label-status label-ticketed' and text()='ticketed']"}
+  (Session info: chrome=58.0.3029.110)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
+Command duration or timeout: 50.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
 System info: host: 'gireesha', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\pritam\AppData\Local\Temp\scoped_dir10876_18542}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 02e7e450c980db2cc20e915f6b8071ae
-*** Element info: {Using=id, value=username}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\pritam\AppData\Local\Temp\scoped_dir16524_984}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 4b5a51455da33899451253448badc0ca
+*** Element info: {Using=xpath, value=//span[@class='label-status label-ticketed' and text()='ticketed']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -50,15 +50,14 @@ Session ID: 02e7e450c980db2cc20e915f6b8071ae
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at com.traveledge.pageobjectlib.Login.loginToAPP(Login.java:49)
-	at com.traveledge.testcasesAir.Roundtrip.login(Roundtrip.java:94)
-	at com.traveledge.testcasesAir.Roundtrip.bookRoundTrip(Roundtrip.java:112)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.traveledge.pageobjectlib.TSP.checkTicketed(TSP.java:42)
+	at com.traveledge.testcasesAir.OneWay.bookOneWayTrip(OneWay.java:140)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -85,88 +84,41 @@ Session ID: 02e7e450c980db2cc20e915f6b8071ae
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookRoundTrip -->
-        <test-method status="PASS" signature="LogTestResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="LogTestResult" is-config="true" duration-ms="2" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=bookRoundTrip status=FAILURE method=Roundtrip.bookRoundTrip()[pri:1, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogTestResult -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="getResult" is-config="true" duration-ms="0" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=bookRoundTrip status=FAILURE method=Roundtrip.bookRoundTrip()[pri:1, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.traveledge.common.ExtentReport.getResult(ExtentReport.java:66)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:709)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.traveledge.testcasesAir.Roundtrip@30c7da1e]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.traveledge.testcasesAir.Roundtrip -->
-      <class name="com.traveledge.testcasesAir.OneWay">
-        <test-method status="SKIP" signature="configBrforeClass()[pri:0, instance:com.traveledge.testcasesAir.OneWay@5b464ce8]" name="configBrforeClass" is-config="true" duration-ms="0" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBrforeClass -->
-        <test-method status="SKIP" signature="bookOneWayTrip()[pri:1, instance:com.traveledge.testcasesAir.OneWay@5b464ce8]" name="bookOneWayTrip" duration-ms="1" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookOneWayTrip -->
-        <test-method status="SKIP" signature="LogTestResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.OneWay@5b464ce8]" name="LogTestResult" is-config="true" duration-ms="0" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogTestResult -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.OneWay@5b464ce8]" name="getResult" is-config="true" duration-ms="0" started-at="2017-05-12T02:42:15Z" finished-at="2017-05-12T02:42:15Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="getResult" is-config="true" duration-ms="510" started-at="2017-05-18T14:00:48Z" finished-at="2017-05-18T14:00:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bookOneWayTrip status=FAILURE method=OneWay.bookOneWayTrip()[pri:1, instance:com.traveledge.testcasesAir.OneWay@39ba5a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tc2()[pri:2, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="tc2" duration-ms="2" started-at="2017-05-18T14:00:49Z" finished-at="2017-05-18T14:00:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc2 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="getResult" is-config="true" duration-ms="67" started-at="2017-05-18T14:00:49Z" finished-at="2017-05-18T14:00:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc2 status=SUCCESS method=OneWay.tc2()[pri:2, instance:com.traveledge.testcasesAir.OneWay@39ba5a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.traveledge.testcasesAir.OneWay@39ba5a14]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-05-18T14:00:49Z" finished-at="2017-05-18T14:00:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.traveledge.testcasesAir.OneWay -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

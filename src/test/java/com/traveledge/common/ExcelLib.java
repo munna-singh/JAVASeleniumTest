@@ -15,6 +15,9 @@ package com.traveledge.common;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -50,6 +53,7 @@ public class ExcelLib {
 			 convetedData=(String) Data;
 					 
 		 }
+		 
 		 else if(cel.getCellType() == XSSFCell.CELL_TYPE_NUMERIC){
 			 long data = (long) cel.getNumericCellValue();
 			 
@@ -59,6 +63,19 @@ public class ExcelLib {
 			 convetedData=Data.toString();
 			 System.out.println("conveted Data value "+convetedData);
 		 }
+		 
+		 else if((cel.getCellType() != XSSFCell.CELL_TYPE_NUMERIC)&& (cel.getCellType() != XSSFCell.CELL_TYPE_STRING)){
+			 
+			 Date data = cel.getDateCellValue();
+			 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+			 String date=df.format(data);
+			 
+			 Data=date;
+			 System.out.println("Data value" + Data);
+			 convetedData=Data.toString();
+			 System.out.println("conveted Data Date value "+convetedData);
+		 }
+		 
 		 System.out.println(convetedData);
 		 return convetedData;
 		
