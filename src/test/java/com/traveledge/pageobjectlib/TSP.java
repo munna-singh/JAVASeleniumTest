@@ -2,6 +2,7 @@ package com.traveledge.pageobjectlib;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.traveledge.common.WebDriverCommonLib;
 
@@ -16,7 +17,12 @@ public class TSP extends WebDriverCommonLib {
 
 	@FindBy(xpath="//a[text()='Back to Trip Services']")
 	private WebElement tsp;
-		
+
+	@FindBy(xpath="//span[@class='label-status label-ticketed' and text()='ticketed']")
+	private WebElement ticketed;	
+	
+	
+	
 	public void clickOnItenaryBook(){
 		itenaryBook.click();
 		waitForPageToLoad();
@@ -31,6 +37,9 @@ public class TSP extends WebDriverCommonLib {
 		tsp.click();
 		waitForPageToLoad();
 		
+	}
+	public void checkTicketed(){
+		Assert.assertTrue(ticketed.isDisplayed(), "staus is not ticketed");
 	}
 	
 }

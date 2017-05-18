@@ -58,11 +58,19 @@ public class Air extends WebDriverCommonLib{
 	}
 	
 	
+	@FindBy(xpath="//th[@class='next']")
+	private WebElement nextMonth;
+	@FindBy(xpath="//td[@class='day' and text()='16']")
+	private WebElement date;
+	
+	
 	public void searchFlightOneWay(Actions act) throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException{
 		newAirQuote.click();
 		onWay.click();
 		String fromAir=e.getExcelData("Air",0,1);
 		String toAir=e.getExcelData("Air",1,1);
+	
+		
 		from.sendKeys(fromAir);
 		Thread.sleep(4000);
 		act.sendKeys(Keys.ARROW_DOWN);
@@ -73,8 +81,14 @@ public class Air extends WebDriverCommonLib{
 		act.sendKeys(Keys.ENTER).perform();
 		
 		depart.click();
-		act.sendKeys(Keys.ARROW_RIGHT);
-		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(5000);
+		nextMonth.click();nextMonth.click();
+		nextMonth.click();nextMonth.click();
+		nextMonth.click();
+		Thread.sleep(3000);
+		date.click();
+//		act.sendKeys(Keys.ARROW_RIGHT);
+//		act.sendKeys(Keys.ENTER).perform();
 		
 		addAirLines(act);
 		selectGDS();

@@ -142,21 +142,21 @@ public class Roundtrip extends ExtentReport{
 //		
 	}
 	
-	 @AfterMethod
-     public  void LogTestResult(ITestResult result) throws Exception
-     {
-    	 if(result.getStatus()==ITestResult.FAILURE)
-    	 {
-    	  
-//    	 String screenshot_path=Utility.captureScreenshot(driver, result.getName());
-//    	 String image= logger.addScreenCapture(screenshot_path);
-    	//	 ExtentReport.logger.log(LogStatus.FAIL, "Title verification");
-    	 }
-    	  
-    	 
-     	
-     }
-    
+//	 @AfterMethod
+//     public  void LogTestResult(ITestResult result) throws Exception
+//     {
+//    	 if(result.getStatus()==ITestResult.FAILURE)
+//    	 {
+//    	  
+////    	 String screenshot_path=Utility.captureScreenshot(driver, result.getName());
+////    	 String image= logger.addScreenCapture(screenshot_path);
+//    	//	 ExtentReport.logger.log(LogStatus.FAIL, "Title verification");
+//    	 }
+//    	  
+//    	 
+//     	
+//     }
+//    
      
 //     @AfterSuite
 //     public void generateReport(){

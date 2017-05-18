@@ -12,10 +12,12 @@
 
 
 package com.traveledge.common;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -30,12 +32,13 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+
 public class ExtentReport
 {
     public static ExtentHtmlReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest test;
-     
+    
     @BeforeSuite
     public void setUp()
     {
@@ -59,13 +62,15 @@ public class ExtentReport
     }
      
     @AfterMethod
-    public void getResult(ITestResult result)
+    public void getResult(ITestResult result) throws IOException
     {
         if(result.getStatus() == ITestResult.FAILURE)
         {
+        	String screenShotPath = GetScreenShot.capture(Browser.driver, "screenShotName");
             test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
             test.fail(result.getThrowable());
-        }
+            test.fail("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
+           }
         else if(result.getStatus() == ITestResult.SUCCESS)
         {
             test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
@@ -75,18 +80,17 @@ public class ExtentReport
             test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" Test Case SKIPPED", ExtentColor.ORANGE));
             test.skip(result.getThrowable());
         }
+        extent.flush();
     }
      
     @AfterSuite
     public void tearDown()
     {
-        extent.flush();
+       // extent.flush();
     }
     
     public String getDateTime(){
-    	
-    	//public char c= '\';
-    	
+        	
     	 // Create object of SimpleDateFormat class and decide the format
     	 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     	 
